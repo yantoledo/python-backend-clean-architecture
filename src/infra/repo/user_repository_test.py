@@ -37,6 +37,7 @@ def test_select_user():
     data = UsersModel(id=user_id, name=name, password=password)
 
     engine = db_connection_handler.get_engine()
+    # SQl Commands
     engine.execute(
         "INSERT INTO users (id, name, password) VALUES ('{}','{}','{}');".format(
             user_id, name, password
