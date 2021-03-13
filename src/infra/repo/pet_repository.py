@@ -1,10 +1,11 @@
+from typing import List
 from src.infra.config import DBConnectionHandler
+from src.data.interfaces import PetRepositoryInterface
 from src.infra.entities import Pets as PetsModel
 from src.domain.models import Pets
-from typing import List
 
 
-class PetRepository:
+class PetRepository(PetRepositoryInterface):
     """ Class to manage Pet Repository """
 
     @classmethod
